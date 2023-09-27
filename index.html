@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medlemmer og Resultater</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="#" type="image/x-icon">
+</head>
+<body>
+  <h1>Medlemmer og Resultater</h1>
+  <div id="container">
+    <div id="tabs">
+      <h2 data-tab-show="members">Medlemmer</h2>
+      <h2 data-tab-show="results">Resultater</h2>
+    </div>
+    
+    <table id="members" class="hide">
+      <thead>
+        <tr>
+          <th onclick="sortTable('members', 'name')">Navn <span class="sort">↕</span></th>
+          <th>Aktiv 
+            <select onchange="filterTable('members', 'active', this.value)">
+              <option value="all">All</option>
+              <option value="ja">Ja</option>
+              <option value="nej">Nej</option>
+            </select>
+          </th>
+          <th onclick="sortTable('members', 'birthdate')">Fødselsdag <span class="sort">↕</span></th>
+          <th onclick="sortTable('members', 'age')">Alder <span class="sort">↕</span></th>
+          <th>Gruppe 
+            <select onchange="filterTable('members', 'group', this.value)">
+              <option value="all">All</option>
+              <option value="senior">Senior</option>
+              <option value="junior">Junior</option>
+            </select>
+          </th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    
+    <table id="results" class="hide">
+      <thead>
+        <tr>
+          <th onclick="sortTable('results', 'date')">Dato <span class="sort">↕</span></th>
+          <th onclick="sortTable('results', 'member')">Medlem <span class="sort">↕</span></th>
+<th>Disciplin 
+    <select data-filter="discipline" onchange="filterTable('results', 'discipline', this.value)">
+        <option value="all">All</option>
+    </select>
+</th>
+<th>Type 
+    <select data-filter="type" onchange="filterTable('results', 'type', this.value)">
+        <option value="all">All</option>
+    </select>
+</th>
+          <th onclick="sortTable('results', 'time')">Tid <span class="sort">↕</span></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <script src="script.js" type="module"></script>
+</body>
+</html>

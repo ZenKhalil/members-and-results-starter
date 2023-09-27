@@ -1,0 +1,103 @@
+body {
+  background-color: #f0f0f0;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient baggrund */
+  color: white;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#tabs {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-bottom: 2px solid #ccc;
+}
+
+#tabs h2 {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+#tabs h2:hover {
+  background-color: #ddd;
+}
+
+#tabs h2.selected {
+  background-color: #ff7e5f;
+}
+
+#tabs h2.active {
+  background-color: #ccc;
+}
+
+#tables {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+.table-container {
+  margin: 20px;
+  width: 80%;
+}
+
+th, td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient baggrund */
+  color: white;
+  cursor: pointer;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.hide {
+  display: none;
+}
+
+#search {
+  padding: 8px;
+  margin: 15px;
+  border: none;
+  border-radius: 4px;
+}
+
+h2 {
+  cursor: pointer;
+}
+
+th.asc::after {
+    content: ' \25B2'; /* Unicode character for 'UP ARROW' */
+}
+
+th.desc::after {
+    content: ' \25BC'; /* Unicode character for 'DOWN ARROW' */
+}
